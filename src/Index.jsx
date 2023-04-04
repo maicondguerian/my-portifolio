@@ -16,7 +16,7 @@ export const Index = () => {
     }
   `
   return (
-    <MyContext.Provider>
+    <MyContext.Provider value={{}}>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         <Container>

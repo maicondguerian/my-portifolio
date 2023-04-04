@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import { Buttom } from "../buttom/Buttom";
 
 const StyledArticle = styled.article`
   margin-top: 3em;
@@ -31,18 +32,6 @@ const StyledBio= styled.p`
     font-size: 18px;
     line-height: 28px;
 `
-
-const StyledButtons = styled.button`
-     color: ${props => props.fColor};
-     background-color: ${props => props.bgColor};
-     
-     &afterContent: {
-        content: props => "'" + props.buttonName + "'",
-        marginLeft: '5px'
-    }   
-     
-`
-
 const Typewriter = ({ message, speed, cursorSpeed }) => {
   const [text, setText] = useState("");
   const [position, setPosition] = useState(0);
@@ -78,7 +67,7 @@ export const WhoIam = () => {
         <h1>
           <Typewriter
             message="Hi! I'm Maicon d'Guerian!"
-            speed={300}
+            speed={900}
             cursorSpeed={400}
           />
         </h1>
@@ -87,6 +76,16 @@ export const WhoIam = () => {
       <StyledBio>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam autem repellendus nostrum odit totam quisquam quasi dolor voluptas earum error.
       </StyledBio>
+      <div>
+      <Buttom 
+            bgColor={'#00a65a'}
+            fColor={'#fff'}
+        />
+                <Buttom 
+            bgColor={'red'}
+            fColor={'#fff'}
+        />
+      </div>
     </StyledArticle>
   );
 };
