@@ -20,7 +20,6 @@ const StyledContainer = styled.div`
 const StyledUl = styled.ul`
     list-style:none;
     display: grid;
-    justify-content:space-between;
     grid-template-columns: repeat(3, 1fr); 
     grid-column-gap: 1rem;
     grid-row-gap: 3rem;
