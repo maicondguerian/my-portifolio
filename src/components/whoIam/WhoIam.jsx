@@ -3,11 +3,10 @@ import styled from "styled-components";
 import { Buttom } from "../buttom/Buttom";
 
 const StyledArticle = styled.article`
-  margin-top: 3em;
   display:flex;
   flex-direction: column;
   gap: 3em;
-  height: 600px;
+  min-height: 600px;
   border-bottom: 1px solid;
 
   div:first-of-type {
@@ -18,28 +17,28 @@ const StyledArticle = styled.article`
     }
   }
 `
- const StyledAvatar = styled.div`
-    background-color: ${props => props.theme.primaryColors.darkGray};
-    height: 600px;
-    width: 350px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    margin: 0 10rem;
- `
+const StyledAvatar = styled.div`
+  background-color: ${props => props.theme.primaryColors.darkGray};
+  height: 650px;
+  width: 400px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0 14rem;
+`
+
 const StyledBio= styled.p`
-    position: relative;
-    max-width: 445px;
-    text-align: left;
-    font-size: 18px;
-    line-height: 28px;
+  position: relative;
+  max-width: 445px;
+  text-align: left;
+  font-size: 18px;
+  line-height: 28px;
 `
 
 const BottonsGroup = styled.span`
-    
-    button:last-child{
-        margin-left:1rem;
-    }
+  button:last-child{
+    margin-left:1rem;
+  }
     
 `
 const Typewriter = ({ message, speed, cursorSpeed }) => {

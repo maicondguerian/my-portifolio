@@ -5,6 +5,9 @@ const StyledContainer = styled.main`
     background-color: ${props => props.theme.primaryColors.midDark};
     height: max-content;
     padding: 2rem 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 `;
 
 export const Container = (props) => {

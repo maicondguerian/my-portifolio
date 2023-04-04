@@ -5,6 +5,7 @@ import { theme } from "./theme/theme"
 import { NavLinks } from "./components/navLinks/NaxLinks"
 import { WhoIam } from "./components/whoIam/WhoIam"
 import { MySkills } from "./components/skills/mySkills"
+import { Projects } from "./components/myProjects/Projects"
 
 export const Index = () => {
   const GlobalStyles = createGlobalStyle`
@@ -24,6 +25,7 @@ export const Index = () => {
           <NavLinks/>
           <WhoIam />
           <MySkills />
+          <Projects />
         </Container>
       </ThemeProvider>
     </MyContext.Provider>
