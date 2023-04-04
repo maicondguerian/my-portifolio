@@ -7,6 +7,8 @@ const StyledArticle = styled.article`
   display:flex;
   flex-direction: column;
   gap: 3em;
+  height: 600px;
+  border-bottom: 1px solid;
 
   div:first-of-type {
     h1 {
@@ -31,6 +33,14 @@ const StyledBio= styled.p`
     text-align: left;
     font-size: 18px;
     line-height: 28px;
+`
+
+const BottonsGroup = styled.span`
+    
+    button:last-child{
+        margin-left:1rem;
+    }
+    
 `
 const Typewriter = ({ message, speed, cursorSpeed }) => {
   const [text, setText] = useState("");
@@ -76,16 +86,20 @@ export const WhoIam = () => {
       <StyledBio>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam autem repellendus nostrum odit totam quisquam quasi dolor voluptas earum error.
       </StyledBio>
-      <div>
-      <Buttom 
-            bgColor={'#00a65a'}
+      <BottonsGroup>
+        <Buttom
+            buttonName='contact me'
+            bgColor={'transparent'}
             fColor={'#fff'}
         />
-                <Buttom 
-            bgColor={'red'}
-            fColor={'#fff'}
-        />
-      </div>
+        <a href="/../../assets/curriculo.pdf" download>
+            <Buttom
+                buttonName='download-cv'
+                bgColor={'transparent'}
+                fColor={'#fff'}
+            />
+        </a>
+      </BottonsGroup>
     </StyledArticle>
   );
 };
