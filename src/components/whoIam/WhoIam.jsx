@@ -85,10 +85,8 @@ export const WhoIam = () => {
       </div>
       <StyledAvatar/>
       <StyledBio>
-        Based in the UK, I’m a front-end developer passionate about building
-        accessible web apps that users love.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam autem repellendus nostrum odit totam quisquam quasi dolor voluptas earum error.
       </StyledBio>
-      <StyledButtons />
     </StyledArticle>
   );
 };
