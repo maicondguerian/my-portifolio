@@ -3,8 +3,7 @@ import styled from 'styled-components';
 
 const StyledContainer = styled.main`
     background-color: ${props => props.theme.primaryColors.midDark};
-    height: 100vh;
-    width: 100vw;
+    height: max-content;
     padding: 2rem 10rem;
 `;
 

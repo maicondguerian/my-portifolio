@@ -77,8 +77,8 @@ export const WhoIam = () => {
         <h1>
           <Typewriter
             message="Hi! I'm Maicon d'Guerian!"
-            speed={900}
-            cursorSpeed={400}
+            speed={300}
+            cursorSpeed={300}
           />
         </h1>
       </div>
