@@ -6,8 +6,14 @@ import { NavLinks } from "./components/navLinks/NaxLinks"
 import { WhoIam } from "./components/whoIam/WhoIam"
 import { MySkills } from "./components/skills/mySkills"
 import { Projects } from "./components/myProjects/Projects"
+import { useState } from "react"
 
 export const Index = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleShowModal = () => {
+    setIsOpen(true);
+  }
   const GlobalStyles = createGlobalStyle`
     *{
       margin: 0;
@@ -18,7 +24,7 @@ export const Index = () => {
     }
   `
   return (
-    <MyContext.Provider value={{}}>
+    <MyContext.Provider value={{handleShowModal, isOpen}}>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         <Container>
