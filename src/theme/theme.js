@@ -13,3 +13,9 @@ export const theme = {
         darkGray: '#b6b0b0ba'
     }
 }
+export const darkThemeColor  = {
+    fontWhite: '#000c',
+    midDark: 'rgb(246, 248, 255)',
+    softGray: '#cccc',
+    darkGray: 'rgb(246, 248, 255)'
+}

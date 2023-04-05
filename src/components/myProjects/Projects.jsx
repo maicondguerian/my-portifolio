@@ -20,7 +20,7 @@ const StyledContainer = styled.div`
   const StyledProjectThumb = styled.ul`
     list-style-type: none;
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(3, 1fr); 
     grid-column-gap: 2rem;
     grid-row-gap: 3rem;
     color: #000;
@@ -44,7 +44,7 @@ const StyledContainer = styled.div`
 `
   const InfosWrapper = styled.span`
     display:flex;
-    flex-direction: column;
+    flex-direction: column
 `
 
 export const Projects = () => {
@@ -54,19 +54,16 @@ export const Projects = () => {
     { proj: "Javascript", exp: "exp" },
     { proj: "React", exp: "exp" },
     { proj: "Next-js", exp: "exp" },
-    { proj: "Jquery", exp: "exp" },
-    { proj: "Styled-components", exp: "exp" },
-    { proj: "Sass", exp: "exp" },
+    { proj: "Jquery", exp: "exp" }
   ];
-
   const SetThumbnail = () => {
     const { isOpen, handleShowModal, setIsOpen } = useContext(MyContext);
-
     return projectsList.map((mock, index) => (
       <InfosWrapper key={index}>
         <li
-          onMouseEnter={handleShowModal}
+          onMouseEnter={handleShowModal} 
           onMouseLeave={() => setIsOpen(false)}
+          
         >
           {mock.img}
           <Modal isOpen={isOpen} />
@@ -76,6 +73,7 @@ export const Projects = () => {
       </InfosWrapper>
     ));
   };
+  
   return (
     <>
       <StyledContainer>
