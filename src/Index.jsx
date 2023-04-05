@@ -10,7 +10,6 @@ import { useState } from "react"
 
 export const Index = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const handleShowModal = () => {
     setIsOpen(true);
   }
@@ -24,7 +23,7 @@ export const Index = () => {
     }
   `
   return (
-    <MyContext.Provider value={{handleShowModal, isOpen}}>
+    <MyContext.Provider value={{handleShowModal, isOpen, setIsOpen}}>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         <Container>
