@@ -5,8 +5,9 @@ const ContactWrapper = styled.ul`
     list-style-type: none;
     min-height:400px;
     border-bottom:1px solid;
-    /* background-color: ${props => props.theme.primaryColors.softDark}; */
+    background-color: ${props => props.theme.primaryColors.softDark};
     position:relative;
+
 
     li:nth-child(1){
         display:flex;
@@ -89,7 +90,7 @@ export const Contact = () => {
         <ContactWrapper>
             <FieldsetWrapper >
                 <li>
-                    <span><AllTitlesStyle customName='contact' /></span>
+                    <span><AllTitlesStyle /></span>
                     <span> I would love to hear about your project and how I could help. Also if you like my projects and want to hire me please contact me, and I’ll get back to you as soon as possible.</span>
                 </li>
                 <li>

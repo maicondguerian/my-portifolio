@@ -40,30 +40,34 @@ const StyledProjectThumb = styled.ul`
   list-style-type: none;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 2rem;
   grid-row-gap: 3rem;
   color: #000;
 
   li {
     background-color: ${(props) => props.theme.primaryColors.softGray};
     height: 400px;
-    width: calc(100% - 5rem);
     margin-bottom: 0.5rem;
     position: relative;
     overflow: hidden;
+    display: block;
+
 
     img {
-      width: auto;
-      height: auto;
+      width: 100%;
+      height: 100%;
+     
     }
   }
 `;
-const InfosWrapper = styled.div`
+
+const InfosWrapper = styled.span`
   display: flex;
   flex-direction: column;
 
-       span {
-      font-size: 25px;
-    }
+    span {
+    font-size: 25px;
+  }
 `;
 
 export const Projects = () => {
@@ -97,7 +101,7 @@ export const Projects = () => {
     <>
       <StyledContainer>
         <span>
-          <AllTitlesStyle customName="projects" />
+          <AllTitlesStyle />
         </span>
         <Buttom bgColor={"transparent"} />
       </StyledContainer>

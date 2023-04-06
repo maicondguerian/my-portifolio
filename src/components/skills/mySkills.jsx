@@ -58,7 +58,7 @@ export const MySkills = () => {
 
     return (
         <StyledContainer>
-            <span> <AllTitlesStyle customName='skills'/> </span> 
+            <span> <AllTitlesStyle /> </span> 
             <StyledUl>
                 <RenderSkills />
             </StyledUl>
