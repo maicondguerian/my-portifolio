@@ -20,7 +20,7 @@ export const Footer = () => {
   return (
     <FooterWrapper>
         <span>
-        <NavLinks Icon={ImArrowUp} />
+          <NavLinks Icon={ImArrowUp} />
         </span>
     </FooterWrapper>
   )

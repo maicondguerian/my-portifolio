@@ -1,9 +1,6 @@
 import styled from "styled-components";
 import { VscGithubInverted } from "react-icons/vsc";
 import { BsLinkedin, BsInstagram, BsDiscord, BsSun } from "react-icons/bs";
-import { useContext } from "react";
-import { MyContext } from "../../context/MyContext";
-import img from '../../assets/Screenshot_9.png'
 
 const StyledNav = styled.nav`
   color: ${(props) => props.theme.primaryColors.fontWhite};
@@ -47,6 +44,8 @@ const StyledNav = styled.nav`
       margin: 0 1rem;
       cursor:pointer;
       position: absolute;
+
+     
     }
   }
 `
@@ -63,6 +62,8 @@ const StyledDiv = styled.div`
     font-size: 24px;
   }
 `
+const LinksGroup = styled.div`
+`
 export const DevLogo = () => {
   return (
     <StyledDiv>
@@ -73,15 +74,15 @@ export const DevLogo = () => {
 
 export const NavLinks = ( {Icon, onClick=()=>{}} ) => {
   return (
-    <StyledNav>
+    <StyledNav id="topo">
     <DevLogo />
-      <div>
+      <LinksGroup>
         <StyledLink href=""><BsLinkedin size={30}/></StyledLink>
         <StyledLink href=""><VscGithubInverted size={30}/></StyledLink>
         <StyledLink href=""><BsInstagram size={30}/></StyledLink>
         <StyledLink href=""><BsDiscord size={30}/></StyledLink>
-        <button onClick={onClick}>{Icon? <Icon size={25}/> : <></>}</button>
-      </div>
+        <button onClick={onClick}><a href="#topo">{Icon? <Icon size={25}/> : <></>}</a></button>
+      </LinksGroup>
     </StyledNav>
   );
 };
