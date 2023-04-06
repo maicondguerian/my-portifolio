@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 const StyledContainer = styled.main`
   background-color: ${props => props.theme.primaryColors.midDark};
-  height: max-content;
   padding: 2rem 10rem 0;
   display: flex;
   flex-direction: column;

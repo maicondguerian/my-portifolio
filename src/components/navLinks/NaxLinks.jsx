@@ -86,7 +86,7 @@ export const NavLinks = ( {Icon, onClick=()=>{}} ) => {
         <StyledLink href=""><VscGithubInverted size={30}/></StyledLink>
         <StyledLink href=""><BsInstagram size={30}/></StyledLink>
         <StyledLink href=""><BsDiscord size={30}/></StyledLink>
-        <button onClick={onClick}><a href="#topo">{Icon? <Icon size={25}/> : <></>}</a></button>
+        <button onClick={onClick}>{Icon? <Icon size={25}/> : <></>}</button>
       </LinksGroup>
     </StyledNav>
   );

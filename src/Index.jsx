@@ -9,7 +9,6 @@ import { MySkills } from "./components/skills/mySkills"
 import { Projects } from "./components/myProjects/Projects"
 import { BsSun, BsMoonFill } from "react-icons/bs";
 import { Contact } from "./components/contact/Contact"
-import { ImArrowUp } from "react-icons/im";
 import { Footer } from "./components/footer/Footer"
 
 export const Index = () => {
