@@ -37,7 +37,7 @@ const StyledNav = styled.nav`
     a:nth-child(2){
       svg{
       &:hover{
-        fill:	#252525; 
+        fill:	#151515; 
       }
     }
     }
@@ -71,8 +71,7 @@ export const DevLogo = () => {
   )
 }
 
-export const NavLinks = ( {Icon} ) => {
-  const { handleToggleTheme } = useContext(MyContext);
+export const NavLinks = ( {Icon, onClick=()=>{}} ) => {
   return (
     <StyledNav>
     <DevLogo />
@@ -81,7 +80,7 @@ export const NavLinks = ( {Icon} ) => {
         <StyledLink href=""><VscGithubInverted size={30}/></StyledLink>
         <StyledLink href=""><BsInstagram size={30}/></StyledLink>
         <StyledLink href=""><BsDiscord size={30}/></StyledLink>
-        <button onClick={handleToggleTheme}><Icon size={25}/></button>
+        <button onClick={onClick}>{Icon? <Icon size={25}/> : <></>}</button>
       </div>
     </StyledNav>
   );

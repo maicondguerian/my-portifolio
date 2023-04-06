@@ -12,8 +12,6 @@ const StyledContainer = styled.div`
         display: flex;
         align-items: center;
     }
-    
-    
 `
 const StyledUl = styled.ul`
     list-style:none;

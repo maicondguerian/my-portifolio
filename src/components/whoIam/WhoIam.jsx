@@ -18,7 +18,7 @@ const StyledArticle = styled.article`
   }
 `
 const StyledAvatar = styled.div`
-  background-color: ${props => props.theme.primaryColors.darkGray};
+  background-color: ${props => props.theme.primaryColors.bgAvatar};
   
   height: 650px;
   width: 400px;

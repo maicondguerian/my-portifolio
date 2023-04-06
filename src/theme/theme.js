@@ -10,12 +10,15 @@ export const theme = {
         midGray: '#EDEDEC',
         softGray: '#b6b0b0ba',
         skyBlue: '#0079ff',
-        darkGray: '#b6b0b0ba'
+        darkGray: '#b6b0b0ba',
+        bgAvatar: '#273036'
     }
 }
 export const darkThemeColor  = {
     fontWhite: '#000c',
     midDark: 'rgb(246, 248, 255)',
     softGray: '#cccc',
-    darkGray: '#b6b0b0ba'
+    darkGray: '#b6b0b0ba',
+    bgAvatar: '#8f949a' 
+
 }

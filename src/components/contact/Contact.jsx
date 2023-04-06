@@ -1,9 +1,12 @@
 import styled from "styled-components"
+import { Buttom } from "../buttom/Buttom"
 
 const ContactWrapper = styled.ul`
     display:flex;
     justify-content:space-between;
     list-style-type: none;
+    height:370px;
+    border-bottom:1px solid;
 
     li:nth-child(1){
         display:flex;
@@ -17,7 +20,8 @@ const ContactWrapper = styled.ul`
     }
     li:nth-child(2){
         width:50%;
-
+        position:relative;
+    
         input{
             width:100%;
             height: 50px;
@@ -38,10 +42,17 @@ const ContactWrapper = styled.ul`
             background-color:transparent;
             border:none;
             border-bottom:1px solid;
-            padding: 2.4rem 1rem;
+            padding: 2.5rem 1rem;
             font-size:16px;
             height: 100px;
             overflow: hidden;
+        }
+
+        button{
+            position:absolute;
+            bottom:0;
+            right:0;
+            margin-bottom:2rem;
         }
     }
 
@@ -68,6 +79,7 @@ export const Contact = () => {
             <input required type="text" placeholder="name"/>
             <input required type="email" placeholder="email"/>
             <textarea  required cols="30" rows="6" placeholder="message"/>
+            <Buttom bgColor={'transparent'}/>
         </li>
     </ContactWrapper>
   )

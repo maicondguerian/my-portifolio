@@ -9,6 +9,8 @@ import { MySkills } from "./components/skills/mySkills"
 import { Projects } from "./components/myProjects/Projects"
 import { BsSun, BsMoonFill } from "react-icons/bs";
 import { Contact } from "./components/contact/Contact"
+import { ImArrowUp } from "react-icons/im";
+import { Footer } from "./components/footer/Footer"
 
 export const Index = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,18 +45,18 @@ export const Index = () => {
       color: ${ props => props.theme.primaryColors.fontWhite};
       outline: none;
     }
-
   `
   return (
     <MyContext.Provider value={{handleShowModal, isOpen, setIsOpen, handleToggleTheme }}>
       <ThemeProvider theme={toggleTheme}>
         <GlobalStyles />
         <Container>
-          <NavLinks Icon={toggleTheme === theme ? BsSun : BsMoonFill } size={25}/>
+          <NavLinks Icon={toggleTheme === theme ? BsSun : BsMoonFill } size={25} onClick={handleToggleTheme}/>
           <WhoIam />
           <MySkills />
           <Projects />
           <Contact />
+          <Footer />
         </Container>
       </ThemeProvider>
     </MyContext.Provider>
