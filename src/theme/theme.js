@@ -11,7 +11,8 @@ export const theme = {
         softGray: '#b6b0b0ba',
         skyBlue: '#0079ff',
         darkGray: '#b6b0b0ba',
-        bgAvatar: '#273036'
+        bgAvatar: '#273036',
+        softDark: '#242424'
     }
 }
 export const darkThemeColor  = {
@@ -19,6 +20,6 @@ export const darkThemeColor  = {
     midDark: 'rgb(246, 248, 255)',
     softGray: '#cccc',
     darkGray: '#b6b0b0ba',
-    bgAvatar: '#8f949a' 
+    bgAvatar: '#8f949a',
 
 }

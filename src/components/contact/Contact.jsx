@@ -5,8 +5,10 @@ const ContactWrapper = styled.ul`
     display:flex;
     justify-content:space-between;
     list-style-type: none;
-    height:370px;
+    height:400px;
     border-bottom:1px solid;
+    margin-top: 2rem;
+    /* background-color: ${props =>props.theme.primaryColors.softDark}; */
 
     li:nth-child(1){
         display:flex;

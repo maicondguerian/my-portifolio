@@ -45,6 +45,13 @@ const StyledNav = styled.nav`
       cursor:pointer;
       position: absolute;
 
+      a:nth-child(1){
+      svg{
+      &:hover{
+        fill:	${props => props.theme.primaryColors.fontWhite}; 
+      }
+    }
+    }
      
     }
   }
@@ -54,9 +61,7 @@ const StyledLink = styled.a`
   margin: 0 1rem;
   right: 0;
 `
-
 const StyledDiv = styled.div`
-
   h1{
     cursor: pointer;
     font-size: 24px;
