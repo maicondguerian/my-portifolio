@@ -1,21 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Buttom } from '../buttom/Buttom';
-
-
+import { AllTitlesStyle } from '../contact/Contact';
 
 const StyledContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 3rem;
     justify-content:space-between;
-    /* h1{
-        font-size: 70px;
-        font-weight: 400;
-        border-bottom: 2px solid ${props => props.theme.primaryColors.softBlue};
-        width: 170px;
-        font-style: italic;
-    } */
+
+    span{
+        display: flex;
+        align-items: center;
+    }
+    
+    
 `
 const StyledUl = styled.ul`
     list-style:none;
@@ -23,13 +21,12 @@ const StyledUl = styled.ul`
     grid-template-columns: repeat(3, 1fr); 
     grid-column-gap: 1rem;
     grid-row-gap: 3rem;
-
+    
     li{
         span{
             font-size: 40px;
             display:flex;
             align-items:center;
-
         } 
     }
 
@@ -48,7 +45,8 @@ export const MySkills = () => {
         { skill: "Next-js", exp: "exp" },
         { skill: "Jquery", exp: "exp"},
         { skill: "Styled-components", exp: "exp" },
-        { skill: "Sass", exp: "exp" }
+        { skill: "Sass", exp: "exp" },
+        { skill: "git", exp: "exp" }
     ];
 
     const RenderSkills = () => {
@@ -62,7 +60,7 @@ export const MySkills = () => {
 
     return (
         <StyledContainer>
-            {/* <h1> Skills</h1> */}
+            <span> <AllTitlesStyle customName='skills'/> </span> 
             <StyledUl>
                 <RenderSkills />
             </StyledUl>

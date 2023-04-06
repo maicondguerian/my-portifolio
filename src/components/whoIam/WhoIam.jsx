@@ -19,12 +19,14 @@ const StyledArticle = styled.article`
 `
 const StyledAvatar = styled.div`
   background-color: ${props => props.theme.primaryColors.darkGray};
+  
   height: 650px;
   width: 400px;
   position: absolute;
   right: 0;
   top: 0;
-  margin: 0 14rem;
+  margin: 0 10rem;
+  border-bottom-left-radius: 100%;
 `
 
 const StyledBio= styled.p`

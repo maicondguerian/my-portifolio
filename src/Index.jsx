@@ -8,6 +8,7 @@ import { WhoIam } from "./components/whoIam/WhoIam"
 import { MySkills } from "./components/skills/mySkills"
 import { Projects } from "./components/myProjects/Projects"
 import { BsSun, BsMoonFill } from "react-icons/bs";
+import { Contact } from "./components/contact/Contact"
 
 export const Index = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,8 +40,10 @@ export const Index = () => {
       padding: 0;
       box-sizing: border-box;
       font-family: 'Space Grotesk', sans-serif;
-      color: ${ props => props.theme.primaryColors.fontWhite}
+      color: ${ props => props.theme.primaryColors.fontWhite};
+      outline: none;
     }
+
   `
   return (
     <MyContext.Provider value={{handleShowModal, isOpen, setIsOpen, handleToggleTheme }}>
@@ -51,6 +54,7 @@ export const Index = () => {
           <WhoIam />
           <MySkills />
           <Projects />
+          <Contact />
         </Container>
       </ThemeProvider>
     </MyContext.Provider>

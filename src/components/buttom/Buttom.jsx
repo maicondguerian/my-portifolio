@@ -9,7 +9,6 @@ const StyledButton = styled.button`
     text-transform: uppercase ;
     border-bottom: 2px solid ${props => props.theme.primaryColors.softBlue};
     height: 40px;
-
     font-weight:600;
     cursor: pointer;
 `

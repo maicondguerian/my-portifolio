@@ -1,6 +1,6 @@
 export const theme = {
     primaryColors: {
-        midDark: '#242424',
+        midDark: '#151515', //# 242424
         fontWhite: 'rgba(255, 255, 255)',
         white: '#fff',
         softDark: '#000c',
@@ -17,5 +17,5 @@ export const darkThemeColor  = {
     fontWhite: '#000c',
     midDark: 'rgb(246, 248, 255)',
     softGray: '#cccc',
-    darkGray: 'rgb(246, 248, 255)'
+    darkGray: '#b6b0b0ba'
 }
