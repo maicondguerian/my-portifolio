@@ -72,7 +72,7 @@ const InfosWrapper = styled.span`
 
 export const Projects = () => {
   const projectsList = [
-    { proj: "dev-finder-github-api", exp: "React fetchAPI react-icons", img: <img src={pjt1} alt="dev-finderGitHubAPI" /> },
+    { proj: "dev-finder-github-api", exp: "React fetchAPI react-icons", img: <img src={pjt1} alt="dev-finderGitHubAPI"/>, id: 1 },
     { proj: "roll-adive-advisor", exp: "React fetchAPI react-icons sass", img: <img src={pjt2} alt="roll-adive-advisor" /> },
     { proj: "interactive-rating-component", exp: "React sass Semantic html5 markup", img: <img src={pjt3} alt="roll-adive-advisor" /> },
     { proj: "React", exp: "exp" },
@@ -82,6 +82,7 @@ export const Projects = () => {
 
   const SetThumbnail = () => {
     const { isOpen, handleShowModal, setIsOpen } = useContext(MyContext);
+
     return projectsList.map((mock, index) => (
       <InfosWrapper key={index}>
         <li

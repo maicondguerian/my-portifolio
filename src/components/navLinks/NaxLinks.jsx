@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { VscGithubInverted } from "react-icons/vsc";
 import { BsLinkedin, BsInstagram, BsDiscord, BsSun } from "react-icons/bs";
+import { useContext } from "react";
+import { MyContext } from "../../context/MyContext";
 
 const StyledNav = styled.nav`
   color: ${(props) => props.theme.primaryColors.fontWhite};
@@ -79,7 +81,7 @@ export const DevLogo = () => {
 
 export const NavLinks = ( {Icon, onClick=()=>{}} ) => {
   return (
-    <StyledNav id="topo">
+    <StyledNav>
     <DevLogo />
       <LinksGroup>
         <StyledLink href=""><BsLinkedin size={30}/></StyledLink>

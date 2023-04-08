@@ -2,13 +2,15 @@ import styled from "styled-components"
 import { Buttom } from "../buttom/Buttom"
 
 const ContactWrapper = styled.ul`
-    width: calc(100% + 20rem);
-    box-sizing: content-box;
+
     list-style-type: none;
     min-height:400px;
     border-bottom:1px solid;
-    background-color: ${props => props.theme.primaryColors.softDark};
+    margin-top: 2rem;
+    /* background-color: ${props => props.theme.primaryColors.softDark}; */
 
+    
+  
 
     li:nth-child(1){
         display:flex;
@@ -69,7 +71,7 @@ const FieldsetWrapper = styled.fieldset`
     display:flex;
     justify-content:space-between;
     border: none;
-    /* margin-top: 2rem; */
+
 `
 
 const StyledTitle = styled.h1`

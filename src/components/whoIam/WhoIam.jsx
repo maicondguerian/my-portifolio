@@ -72,6 +72,7 @@ const Typewriter = ({ message, speed, cursorSpeed }) => {
 };
 
 export const WhoIam = () => {
+
   return (
     <StyledArticle>
       <div>
@@ -88,6 +89,7 @@ export const WhoIam = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam autem repellendus nostrum odit totam quisquam quasi dolor voluptas earum error.
       </StyledBio>
       <BottonsGroup>
+        
         <Buttom
             buttonName='contact me'
             bgColor={'transparent'}

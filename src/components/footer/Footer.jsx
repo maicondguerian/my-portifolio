@@ -1,6 +1,8 @@
 import styled from "styled-components"
 import { NavLinks } from "../navLinks/NaxLinks"
 import { ImArrowUp } from "react-icons/im";
+import { useContext } from "react";
+import { MyContext } from "../../context/MyContext";
 
 
 const FooterWrapper = styled.footer`
@@ -17,10 +19,11 @@ const FooterWrapper = styled.footer`
 
 `
 export const Footer = () => {
+  const { handleScrollToTop } = useContext(MyContext);
   return (
     <FooterWrapper>
         <span>
-          <NavLinks Icon={ImArrowUp} />
+          <NavLinks Icon={ImArrowUp} onClick={handleScrollToTop}/>
         </span>
     </FooterWrapper>
   )
