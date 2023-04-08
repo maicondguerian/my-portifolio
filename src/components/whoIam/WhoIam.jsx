@@ -8,12 +8,13 @@ const StyledArticle = styled.article`
   gap: 3em;
   min-height: 600px;
   border-bottom: 1px solid;
+  margin-top: 5rem;
 
   div:first-of-type {
     h1 {
       font-size: 80px;
       position: relative;
-      z-index: 1000;
+
     }
   }
 `
