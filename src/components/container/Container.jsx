@@ -4,7 +4,7 @@ import { MyContext } from '../../context/MyContext';
 
 const StyledContainer = styled.main`
   background-color: ${props => props.theme.primaryColors.midDark};
-  padding: 2rem 10rem 0;
+  padding: 1rem 10rem 0 ;
   display: flex;
   flex-direction: column;
   gap: 4rem;

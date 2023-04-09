@@ -8,15 +8,13 @@ const StyledNav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-
-    button{
-      background-color:transparent;
-      border: none;
-      margin: 0 -2rem;
-      cursor:pointer;
-    }
   
+`
+const ThemeButtom = styled.button`
+    background-color:transparent;
+    border: none;
+    margin: 0 -2rem;
+    cursor:pointer;
 `
 const StyledLink = styled.a`
   color: inherit;
@@ -53,8 +51,9 @@ const SocialLinksWrapper = styled.div`
   a:nth-child(4){
     svg{
     &:hover{
-      fill:	#5865f2; 
+      fill:	#5865f2;
     }
+    
   }
   }
   a:nth-child(1){
@@ -90,14 +89,13 @@ const SocialLinks = () => {
       <StyledLink href=""><BsDiscord size={30}/></StyledLink>
     </SocialLinksWrapper>
   )
-
 }
 
 const MenuLinksWrapper = styled.div`
   display: flex;
   align-items: center;
   position: fixed;
-  height: 50px;
+  height: 60px;
   width: calc(100% - 20rem);
   background-color: ${props => props.theme.primaryColors.bgAvatar};
   z-index: 1000;
@@ -105,6 +103,7 @@ const MenuLinksWrapper = styled.div`
   span{
     position: absolute;
     right: 0;
+  
     button{
       margin: 0 0.2rem 0 1rem;
     }
@@ -115,6 +114,8 @@ const FixedBar = () => {
   for(let i = 0; i < 4; i++){
     buttons.push(<Buttom 
       key={i}
+      fSize={'13px'}
+      bgColor={'transparent'} 
       />)
   }
   return(
@@ -127,12 +128,21 @@ const FixedBar = () => {
   )
 }
 
+export const FooterLinks = ({Icon, onClick=()=>{}}) => {
+  return(
+    <StyledNav>
+      <DevLogo />
+      <ThemeButtom onClick={onClick}>{Icon? <Icon size={25}/> : <></>}</ThemeButtom>
+    </StyledNav>
+  )
+}
+
 export const NavLinks = ( {Icon, onClick=()=>{}} ) => {
   return (
     <StyledNav>
       <FixedBar />
-      <DevLogo />
-      <button onClick={onClick}>{Icon? <Icon size={25}/> : <></>}</button>
+      <div></div>
+      <ThemeButtom onClick={onClick}>{Icon? <Icon size={25}/> : <></>}</ThemeButtom>
       <SocialLinks />
     </StyledNav>
   );

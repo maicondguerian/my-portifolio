@@ -21,5 +21,6 @@ export const darkThemeColor  = {
     softGray: '#cccc',
     darkGray: '#b6b0b0ba',
     bgAvatar: '#8f949a',
+    softBlue: '#0079ff',
 
 }

@@ -5,7 +5,7 @@ const ModalWrapper = styled.div`
 
 `
 const StyledOverlay = styled.div`
-    background-color: rgba(0, 0, 0, .05);
+    background-color: rgba(0, 0, 0, 0.4);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -32,6 +32,7 @@ export const Modal = ({isOpen=false, children}) => {
                 <ModalWrapper>
                     <Overlay>
                         testeboy
+                        {children}
                     </Overlay>
                 </ModalWrapper>
             )}

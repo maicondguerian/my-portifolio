@@ -14,7 +14,7 @@ const StyledArticle = styled.article`
     h1 {
       font-size: 80px;
       position: relative;
-
+      z-index: 100;
     }
   }
 `

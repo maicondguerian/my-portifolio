@@ -15,7 +15,6 @@ export const Index = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [toggleTheme, setToggleTheme] = useState(theme);
   const startOfPageRef   = useRef(null);
-
   const GlobalStyles = createGlobalStyle`
     *{
       margin: 0;
