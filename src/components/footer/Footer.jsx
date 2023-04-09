@@ -4,7 +4,6 @@ import { ImArrowUp } from "react-icons/im";
 import { useContext } from "react";
 import { MyContext } from "../../context/MyContext";
 
-
 const FooterWrapper = styled.footer`
   background-image: url('../../../public/pattern.svg');
   background-size:cover;

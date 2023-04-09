@@ -122,6 +122,7 @@ const FixedBar = () => {
       fSize={'13px'}
       bgColor={'transparent'}
       onClick={movePage}
+      buttonName={`customname${i}`}
       />)
   }
   return(
