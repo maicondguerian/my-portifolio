@@ -3,7 +3,7 @@ import { ThemeProvider, createGlobalStyle } from "styled-components"
 import { Container } from "./components/container/Container"
 import { MyContext } from "./context/MyContext"
 import { darkThemeColor, theme } from "./theme/theme"
-import { NavLinks } from "./components/navLinks/NaxLinks"
+import { NavLinks } from "./components/navLinks/NavLinks"
 import { WhoIam } from "./components/whoIam/WhoIam"
 import { MySkills } from "./components/skills/mySkills"
 import { Projects } from "./components/myProjects/Projects"
@@ -15,6 +15,7 @@ export const Index = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [toggleTheme, setToggleTheme] = useState(theme);
   const startOfPageRef   = useRef(null);
+  const skillSection   = useRef(null);
   const GlobalStyles = createGlobalStyle`
     *{
       margin: 0;
@@ -52,13 +53,20 @@ const handleScrollToTop= () => {
   }
 }
 
+
+const movePage = () =>{
+    if(skillSection.current){
+      skillSection.current.scrollIntoView({behavior: 'smooth'})
+    }
+} 
+
   // const handleScrollToTop = () => {
   //   const element = document.querySelector('#teste')
   //   element.scrollIntoView({behavior: 'smooth'});
   // }
 
   return (
-    <MyContext.Provider value={{handleShowModal, isOpen, setIsOpen, handleToggleTheme, startOfPageRef, handleScrollToTop }}>
+    <MyContext.Provider value={{handleShowModal, isOpen, setIsOpen, handleToggleTheme, startOfPageRef, handleScrollToTop,skillSection, movePage }}>
       <ThemeProvider theme={toggleTheme}>
         <GlobalStyles />
         <Container>

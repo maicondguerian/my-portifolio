@@ -12,10 +12,10 @@ const StyledButton = styled.button`
     font-weight:600;
     cursor: pointer;
 `
-export const Buttom = ( {bgColor, fColor, buttonName='customName', fSize} ) => {
+export const Buttom = ({ bgColor, fColor, buttonName='customName', fSize, onClick=()=>{} }) => {
     return (
         <>
-            <StyledButton bgColor={bgColor} fColor={fColor} fSize={fSize}>
+            <StyledButton bgColor={bgColor} fColor={fColor} fSize={fSize} onClick={onClick}>
                 {buttonName}
             </StyledButton>
         </>

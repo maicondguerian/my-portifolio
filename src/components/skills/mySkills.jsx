@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useContext, useRef } from 'react'
 import styled from 'styled-components'
 import { AllTitlesStyle } from '../contact/Contact';
+import { MyContext } from '../../context/MyContext';
 
 const StyledContainer = styled.div`
     display: flex;
@@ -8,9 +9,9 @@ const StyledContainer = styled.div`
     gap: 3rem;
     justify-content:space-between;
 
+
     span{
         display: flex;
-        align-items: center;
     }
 `
 const StyledUl = styled.ul`
@@ -35,6 +36,7 @@ const StyledUl = styled.ul`
 `
 
 export const MySkills = () => {
+    const { skillSection } = useContext(MyContext);
     const listSkills = [
         { skill: "html", exp: "exp" },
         { skill: "css", exp: "exp" },
@@ -57,11 +59,14 @@ export const MySkills = () => {
     };
 
     return (
+        <>
+        <span ref={skillSection} />
         <StyledContainer>
             <span> <AllTitlesStyle /> </span> 
             <StyledUl>
                 <RenderSkills />
             </StyledUl>
         </StyledContainer>
+        </>
     );
 };

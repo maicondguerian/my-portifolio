@@ -2,15 +2,17 @@ import styled from "styled-components";
 import { VscGithubInverted } from "react-icons/vsc";
 import { BsLinkedin, BsInstagram, BsDiscord, BsSun } from "react-icons/bs";
 import { Buttom } from "../buttom/Buttom";
+import { useContext } from "react";
+import { MyContext } from "../../context/MyContext";
 
-const StyledNav = styled.nav`
+export const StyledNav = styled.nav`
   color: ${(props) => props.theme.primaryColors.fontWhite};
   display: flex;
   align-items: center;
   justify-content: space-between;
   
 `
-const ThemeButtom = styled.button`
+export const ThemeButtom = styled.button`
     background-color:transparent;
     border: none;
     margin: 0 -2rem;
@@ -20,6 +22,7 @@ const StyledLink = styled.a`
   color: inherit;
   margin: 0 0.5rem;
   padding: 0.5rem 0;
+
 `
 const StyledDiv = styled.div`
   h1{
@@ -95,6 +98,7 @@ const MenuLinksWrapper = styled.div`
   display: flex;
   align-items: center;
   position: fixed;
+  top: 0;
   height: 60px;
   width: calc(100% - 20rem);
   background-color: ${props => props.theme.primaryColors.bgAvatar};
@@ -110,12 +114,14 @@ const MenuLinksWrapper = styled.div`
   }
 `
 const FixedBar = () => {
+  const { movePage } = useContext(MyContext);
   const buttons = [];
   for(let i = 0; i < 4; i++){
     buttons.push(<Buttom 
       key={i}
       fSize={'13px'}
-      bgColor={'transparent'} 
+      bgColor={'transparent'}
+      onClick={movePage}
       />)
   }
   return(
@@ -128,20 +134,11 @@ const FixedBar = () => {
   )
 }
 
-export const FooterLinks = ({Icon, onClick=()=>{}}) => {
-  return(
-    <StyledNav>
-      <DevLogo />
-      <ThemeButtom onClick={onClick}>{Icon? <Icon size={25}/> : <></>}</ThemeButtom>
-    </StyledNav>
-  )
-}
-
 export const NavLinks = ( {Icon, onClick=()=>{}} ) => {
   return (
     <StyledNav>
       <FixedBar />
-      <div></div>
+      <div/>
       <ThemeButtom onClick={onClick}>{Icon? <Icon size={25}/> : <></>}</ThemeButtom>
       <SocialLinks />
     </StyledNav>
