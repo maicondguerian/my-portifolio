@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { VscGithubInverted } from "react-icons/vsc";
-import { BsLinkedin, BsInstagram, BsDiscord, BsSun } from "react-icons/bs";
+import { BsLinkedin, BsInstagram, BsDiscord } from "react-icons/bs";
 import { Buttom } from "../buttom/Buttom";
 import { useContext } from "react";
 import { MyContext } from "../../context/MyContext";
