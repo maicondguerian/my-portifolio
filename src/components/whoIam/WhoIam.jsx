@@ -96,7 +96,7 @@ export const WhoIam = () => {
             bgColor={'transparent'}
             fColor={'#fff'}
         />
-        <a href="/../../assets/curriculo.pdf" download>
+        <a href="" >{/* //download */}
             <Buttom
                 buttonName='download-cv'
                 bgColor={'transparent'}
