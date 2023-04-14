@@ -4,7 +4,6 @@ import { Buttom } from "../buttom/Buttom";
 import pjt1 from "../../assets/Screenshot_3.png";
 import pjt2 from "../../assets/Screenshot_7.png";
 import pjt3 from "../../assets/Screenshot_8.png";
-import { MyContext } from "../../context/MyContext";
 import { Modal } from "../modal/Modal";
 import { AllTitlesStyle } from "../contact/Contact";
 
