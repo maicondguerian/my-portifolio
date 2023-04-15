@@ -11,7 +11,7 @@ const StyledContainer = styled.main`
 `
 
 export const Container = ({ children }) => {
-  const { startOfPageRef } = useContext(MyContext)
+  const { startOfPageRef } = useContext(MyContext);
   return (
     <>
       <div ref={startOfPageRef} />
@@ -19,5 +19,5 @@ export const Container = ({ children }) => {
         {children}
       </StyledContainer>
     </>
-  )
+  );
 };
