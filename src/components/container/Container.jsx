@@ -7,7 +7,7 @@ const StyledContainer = styled.main`
   padding: 1rem 10rem 0 ;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
 `
 
 export const Container = ({ children }) => {

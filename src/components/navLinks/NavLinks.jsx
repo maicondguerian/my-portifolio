@@ -86,10 +86,10 @@ const SocialLinksWrapper = styled.div`
 const SocialLinks = () => {
   return(
     <SocialLinksWrapper>
-      <StyledLink href=""><BsLinkedin size={30}/></StyledLink>
-      <StyledLink href=""><VscGithubInverted size={30}/></StyledLink>
-      <StyledLink href=""><BsInstagram size={30}/></StyledLink>
-      <StyledLink href=""><BsDiscord size={30}/></StyledLink>
+      <StyledLink href="https://www.linkedin.com/in/maicondguerian/" target="_blank"><BsLinkedin size={30}/></StyledLink>
+      <StyledLink href="https://github.com/maicondguerian" target="_blank"><VscGithubInverted size={30}/></StyledLink>
+      <StyledLink href="https://www.instagram.com/maicondguerian/" target="_blank"><BsInstagram size={30}/></StyledLink>
+      <StyledLink href="https://www.discordapp.com/users/155150206005018625" target="_blank"><BsDiscord size={30}/></StyledLink>
     </SocialLinksWrapper>
   )
 }

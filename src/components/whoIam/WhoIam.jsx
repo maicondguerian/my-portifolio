@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import styled from "styled-components";
 import { Buttom } from "../buttom/Buttom";
+import { MyContext } from "../../context/MyContext";
 
 const StyledArticle = styled.article`
   display:flex;
@@ -73,9 +74,10 @@ const Typewriter = ({ message, speed, cursorSpeed }) => {
 };
 
 export const WhoIam = () => {
-
+const {skillSection} = useContext(MyContext)
   return (
-    <StyledArticle>
+    <>
+          <StyledArticle>
       <div>
         <h1>
           <Typewriter
@@ -104,6 +106,8 @@ export const WhoIam = () => {
             />
         </a>
       </BottonsGroup>
-    </StyledArticle>
+    </StyledArticle>  
+      <span ref={skillSection}/>
+    </>
   );
 };

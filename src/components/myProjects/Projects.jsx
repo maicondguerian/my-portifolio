@@ -69,10 +69,10 @@ const InfosWrapper = styled.span`
   }
 `;
 
-const List = ({ mock }) => {
+const List = ({ mock, id }) => {
   const [modal, setModal] = useState(false);
   return (
-    <InfosWrapper key={mock.id}>
+    <InfosWrapper>
       <ul>
         <li
           onMouseEnter={()=> setModal(true)}
@@ -99,10 +99,9 @@ export const Projects = () => {
     { proj: "Jquery", exp: "exp", id: 6 },
   ];
 
-  const SetThumbnail = (e) => {
-    // const { isOpen, handleShowModal, setIsOpen } = useContext(MyContext);
+  const SetThumbnail = () => {
     return projectsList.map((mock) => (
-      <List mock={mock}/>
+      <List mock={mock} key={mock.id}/>
     ));
   };
 

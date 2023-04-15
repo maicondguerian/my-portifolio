@@ -1,4 +1,4 @@
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { ThemeProvider, createGlobalStyle } from "styled-components"
 import { Container } from "./components/container/Container"
 import { MyContext } from "./context/MyContext"
@@ -10,13 +10,22 @@ import { Projects } from "./components/myProjects/Projects"
 import { BsSun, BsMoonFill } from "react-icons/bs";
 import { Contact } from "./components/contact/Contact"
 import { Footer } from "./components/footer/Footer"
+import {useLocalStorage} from './localStorage'
 
 export const Index = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [toggleTheme, setToggleTheme] = useState(theme);
   const startOfPageRef   = useRef(null);
   const skillSection   = useRef(null);
-  const GlobalStyles = createGlobalStyle`
+  const darkTheme = {
+    ...theme,
+    primaryColors: {
+      ...theme.primaryColors,
+      ...darkThemeColor
+    }
+  }
+
+  const [toggleTheme, setToggleTheme] = useLocalStorage(darkTheme, theme);
+    const GlobalStyles = createGlobalStyle`
     *{
       margin: 0;
       padding: 0;
@@ -27,7 +36,7 @@ export const Index = () => {
     }
   `
 
-  const handleShowModal = () => {
+const handleShowModal = () => {
     setIsOpen(true);
   }
 
@@ -38,14 +47,9 @@ export const Index = () => {
       setToggleTheme(theme);
     }
   }
+  useEffect(()=>{
 
-  const darkTheme = {
-    ...theme,
-    primaryColors: {
-      ...theme.primaryColors,
-      ...darkThemeColor
-    }
-  }
+  },[darkTheme, darkTheme]);
 
 const handleScrollToTop= () => {
   if(startOfPageRef.current){
@@ -63,7 +67,7 @@ const movePage = () =>{
   // const handleScrollToTop = () => {
   //   const element = document.querySelector('#teste')
   //   element.scrollIntoView({behavior: 'smooth'});
-  // }
+  // } forma alternativa de fazer pegando o elemento  pelo id do doom/
 
   return (
     <MyContext.Provider value={{handleShowModal, isOpen, setIsOpen, handleToggleTheme, startOfPageRef, handleScrollToTop,skillSection, movePage }}>

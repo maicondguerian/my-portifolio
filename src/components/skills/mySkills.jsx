@@ -36,17 +36,16 @@ const StyledUl = styled.ul`
 `
 
 export const MySkills = () => {
-    const { skillSection } = useContext(MyContext);
     const listSkills = [
-        { skill: "html", exp: "exp" },
-        { skill: "css", exp: "exp" },
-        { skill: "Javascript", exp: "exp" },
-        { skill: "React", exp: "exp" },
-        { skill: "Next-js", exp: "exp" },
-        { skill: "Jquery", exp: "exp"},
-        { skill: "Styled-components", exp: "exp" },
-        { skill: "Sass", exp: "exp" },
-        { skill: "git", exp: "exp" }
+        { skill: "html", exp: "1 years experience" },
+        { skill: "css", exp: "1 years experience" },
+        { skill: "Javascript", exp: "1 years experience" },
+        { skill: "React", exp: "7 months experience" },
+        { skill: "Next-js", exp: "2 months experience" },
+        { skill: "Jquery", exp: "7 months experience"},
+        { skill: "Styled-components", exp: "7 months experience" },
+        { skill: "Sass", exp: "7 months experience" },
+        { skill: "git", exp: "1 years experience" }
     ];
 
     const RenderSkills = () => {
@@ -60,9 +59,8 @@ export const MySkills = () => {
 
     return (
         <>
-        <span ref={skillSection} />
         <StyledContainer>
-            <span> <AllTitlesStyle /> </span> 
+            <span> <AllTitlesStyle customName='Skills'/> </span> 
             <StyledUl>
                 <RenderSkills />
             </StyledUl>
