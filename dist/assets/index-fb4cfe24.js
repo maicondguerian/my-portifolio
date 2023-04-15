@@ -300,7 +300,7 @@ Error generating stack: `+o.message+`
     display:flex;
     align-items:center;
     justify-content:center;
-`,sh=({children:e})=>E(uh,{children:e}),ah=({isOpen:e=!1,children:t})=>E(pn,{children:e&&E(ih,{children:ee(sh,{children:["testeboy",t]})})}),ch=ie.div`
+`,sh=({children:e})=>E(uh,{children:e}),ah=({isOpen:e=!1,children:t})=>E(pn,{children:e&&E(ih,{children:ee(sh,{children:["test",t]})})}),ch=ie.div`
   /* display: flex;
   align-items: center;
   justify-content: space-between; */
@@ -356,7 +356,6 @@ Error generating stack: `+o.message+`
     font-size: 25px;
   }
 `,ph=({mock:e})=>{const[t,n]=K.useState(!1);return ee(dh,{children:[E("ul",{children:ee("li",{onMouseEnter:()=>n(!0),onMouseLeave:()=>n(!1),children:[e.img,E(ah,{isOpen:t})]})}),E("span",{children:e.proj}),ee("p",{children:[" ",e.exp," "]})]},e.id)},hh=()=>{const e=[{proj:"dev-finder-github-api",exp:"React fetchAPI react-icons",img:E("img",{src:rh,alt:"dev-finderGitHubAPI"}),id:1},{proj:"roll-adive-advisor",exp:"React fetchAPI react-icons sass",img:E("img",{src:lh,alt:"roll-adive-advisor"}),id:2},{proj:"interactive-rating-component",exp:"React sass Semantic html5 markup",img:E("img",{src:oh,alt:"roll-adive-advisor"}),id:3},{proj:"React",exp:"exp",id:4},{proj:"Next-js",exp:"exp",id:5},{proj:"Jquery",exp:"exp",id:6}];return ee(pn,{children:[ee(ch,{children:[E("span",{children:E(ls,{})}),E(Ur,{bgColor:"transparent"})]}),E(fh,{children:E(n=>e.map(r=>E(ph,{mock:r})),{})})]})};function mh(e){return vn({tag:"svg",attr:{version:"1.1",viewBox:"0 0 16 16"},child:[{tag:"path",attr:{d:"M8 0.5l-7.5 7.5h4.5v8h6v-8h4.5z"}}]})(e)}const vh=ie.footer`
-  background-image: url('../../../public/pattern.svg');
   background-size:cover;
   height:300px;
   position: relative;
