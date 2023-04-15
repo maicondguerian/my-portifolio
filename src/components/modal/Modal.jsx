@@ -31,7 +31,7 @@ export const Modal = ({isOpen=false, children}) => {
             {isOpen &&(
                 <ModalWrapper>
                     <Overlay>
-                        testeboy
+                        test
                         {children}
                     </Overlay>
                 </ModalWrapper>
