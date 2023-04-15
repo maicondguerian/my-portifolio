@@ -5,7 +5,6 @@ import { useContext } from "react";
 import { MyContext } from "../../context/MyContext";
 
 const FooterWrapper = styled.footer`
-  background-image: url('../../../public/footer.svg');
   background-size:cover;
   height:300px;
   position: relative;
