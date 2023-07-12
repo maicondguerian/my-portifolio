@@ -3,6 +3,7 @@ import styled from "styled-components";
 import pjt1 from "../../assets/Screenshot_3.png";
 import pjt2 from "../../assets/Screenshot_7.png";
 import pjt3 from "../../assets/Screenshot_8.png";
+import pjt4 from "../../assets/Screenshot_9.png";
 import { Modal } from "../modal/Modal";
 import { AllTitlesStyle } from "../allTittleStyle/AllTittleStyle";
 import { MyContext } from "../../context/MyContext";
@@ -75,7 +76,9 @@ const List = ({ mock }) => {
           onMouseLeave={() => setModal(false)}
         >
           {mock.img}
-          <Modal isOpen={modal} />
+          <Modal isOpen={modal} >
+            <a href={mock.url} target="_blank" rel="noopener noreferrer">open</a>
+          </Modal>
         </li>
       </ul>
       <span>{mock.proj}</span>
@@ -92,22 +95,33 @@ export const Projects = () => {
       exp: "React fetchAPI react-icons",
       img: <img src={pjt1} alt="dev-finderGitHubAPI" />,
       id: 1,
+      url:'https://maicondguerian.github.io/dev-finderGitHubAPI/'
     },
     {
       proj: "roll-adive-advisor",
       exp: "React fetchAPI react-icons sass",
       img: <img src={pjt2} alt="roll-adive-advisor" />,
       id: 2,
+      url:'https://maicondguerian.github.io/roll-dice-advisor-api/'
+
     },
     {
-      proj: "interactive-rating-component",
-      exp: "React sass Semantic html5 markup",
+      proj: "interactive-rating-component/",
+      exp: "exp",
       img: <img src={pjt3} alt="roll-adive-advisor" />,
-      id: 3,
+      id: 5,
+      url:'https://front-end-mentor-challenge-next-js.vercel.app/'
     },
-    { proj: "React", exp: "exp", id: 4 },
-    { proj: "Next-js", exp: "exp", id: 5 },
-    { proj: "Jquery", exp: "exp", id: 6 },
+    {
+      proj: "sign-up-with-success-message-NEXTI.JS",
+      exp: "React sass Semantic html5 markup",
+      img: <img src={pjt4} alt="roll-adive-advisor" />,
+      id: 3,
+      url: 'https://front-end-mentor-challenge-next-js.vercel.app/'
+      
+    },
+    { proj: "--", exp: "exp", id: 5 },
+    { proj: "--", exp: "exp", id: 6 },
   ];
 
   const SetThumbnail = () => {
@@ -118,7 +132,7 @@ export const Projects = () => {
     <>
       <span ref={projectsSectionRef} />
       <span />
-      <StyledContainer ref={projectsSectionRef}>
+      <StyledContainer>
         <span>
           <AllTitlesStyle customName="Projects" />
         </span>

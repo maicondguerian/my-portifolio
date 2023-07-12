@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useContext, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { Buttom } from "../buttom/Buttom";
-import { MyContext } from "../../context/MyContext";
 import { FiClipboard } from "react-icons/fi";
 const StyledArticle = styled.article`
   display: flex;
@@ -58,18 +57,19 @@ const EmailSpan = styled.span`
   align-items: center;
   justify-content: center;
   box-shadow: 0 0.063rem 0.188rem rgb(31 50 81 / 12%), 0 0.063rem 0.125rem rgb(31 50 81 / 24%);
-
-  /* &:hover::before {
-    content: "click to copy! ";
-    position: absolute;
-    bottom: -20px; 
-    left: 0;
-    padding: 4px 8px;
-    background-color: #3333338d;
-    color: yellow;
-    border-radius: 4px;
-    font-size: 14px;
-  } */
+  color: ${ props => props.theme.primaryColors.softBlue};
+  
+      /* &:hover::before {
+      content: "click the icon to copy! ";
+      position: absolute;
+      bottom: -20px; 
+      right: 0;
+      padding: 4px 8px;
+      background-color: #3333338d;
+      color: yellow;
+      border-radius: 4px;
+      font-size: 14px;
+    } */
 
   &::after{
     content: "";
@@ -88,7 +88,6 @@ const EmailSpan = styled.span`
     right: 5px;
     top: 5px;
     cursor: pointer;
-
   }
 `
 const Typewriter = ({ message, speed, cursorSpeed }) => {
@@ -121,7 +120,6 @@ const Typewriter = ({ message, speed, cursorSpeed }) => {
 
 export const WhoIam = () => {
   const [showEmail, setShowEmail] = useState(false);
-  const { skillSection } = useContext(MyContext);
   const [isCopied, setIsCopied] = useState(false);
   const emailRef = useRef(null)
 
@@ -177,7 +175,6 @@ export const WhoIam = () => {
           </a>
         </BottonsGroup>
       </StyledArticle>
-      {/* <span ref={skillSection} /> */}
     </>
   );
 };

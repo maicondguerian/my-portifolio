@@ -20,8 +20,7 @@ const StyledUl = styled.ul`
     grid-template-columns: repeat(3, 1fr); 
     grid-column-gap: 1rem;
     grid-row-gap: 4rem;
-   margin-bottom: 200px;
-    
+
     
     li{
         span{
@@ -48,7 +47,8 @@ export const MySkills = () => {
         { skill: "NextJS", exp: "2 months experience" },
         { skill: "Jquery", exp: "7 months experience"},
         { skill: "Styled-components", exp: "7 months experience" },
-        { skill: "Git", exp: "1 years experience" }
+        { skill: "Git", exp: "1 years experience" },
+        { skill: "M-UI", exp: "4 months experience" },
     ];
 
     const RenderSkills = () => {
@@ -65,7 +65,7 @@ export const MySkills = () => {
         <span ref={skillSectionRef}/>
         <span />
         <StyledContainer>
-            <span> <AllTitlesStyle customName='Skills'/> </span> 
+            <span><AllTitlesStyle customName='Skills'/></span> 
             <StyledUl>
                 <RenderSkills />
             </StyledUl>

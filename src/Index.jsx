@@ -25,7 +25,7 @@ export const Index = () => {
     }
   }
 
-  const [toggleTheme, setToggleTheme] = useLocalStorage(darkTheme, theme);
+  const [toggleTheme, setToggleTheme] = useLocalStorage('darkTheme', theme);
     const GlobalStyles = createGlobalStyle`
     *{
       margin: 0;

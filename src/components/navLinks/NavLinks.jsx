@@ -45,9 +45,10 @@ const SocialLinksWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   height: 220px;
-  background-color: ${(props) => props.theme.primaryColors.bgAvatar};
-  border-top-right-radius: 40px;
+  background-color: ${ props => props.theme.primaryColors.bgAvatar};
+    border-top-right-radius: 40px;
   border-bottom-right-radius: 40px;
+  box-shadow: 0 0.063rem 0.188rem rgb(31 50 81 / 12%), 0 0.063rem 0.125rem rgb(31 50 81 / 24%);
 
   a:nth-child(4) {
     svg {
