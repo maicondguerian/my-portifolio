@@ -1,10 +1,10 @@
 import { useContext, useState } from "react";
 import styled from "styled-components";
-import pjt1 from "../../assets/Screenshot_3.png";
-import pjt2 from "../../assets/Screenshot_7.png";
-import pjt3 from "../../assets/Screenshot_8.png";
-import pjt4 from "../../assets/Screenshot_9.png";
-import pjt5 from "../../assets/Screenshot_10.png";
+import pjt1 from "../../../public/assets/Screenshot_3.png";
+import pjt2 from "../../../public/assets/Screenshot_7.png";
+import pjt3 from "../../../public/assets/Screenshot_8.png";
+import pjt4 from "../../../public/assets/Screenshot_9.png";
+import pjt5 from "../../../public/assets/Screenshot_10.png";
 import { Modal } from "../modal/Modal";
 import { AllTitlesStyle } from "../allTittleStyle/AllTittleStyle";
 import { MyContext } from "../../context/MyContext";
