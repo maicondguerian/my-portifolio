@@ -34,12 +34,12 @@ const Typewriter = ({ message, speed, cursorSpeed }) => {
 export const WhoIam = () => {
   const [showEmail, setShowEmail] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
-  const emailRef = useRef(null)
+  const emailRef = useRef(null);
 
   const handleClipboardChange = () => {
-    navigator.clipboard.writeText(emailRef.current?.textContent)
+    navigator.clipboard.writeText(emailRef.current?.textContent);
     setIsCopied(true);
-    };
+  };
 
   return (
     <>
@@ -64,22 +64,25 @@ export const WhoIam = () => {
         </S.StyledBio>
         <S.BottonsGroup>
           <Buttom
-          onClick={()=> setShowEmail(!showEmail)}
-            
+            onClick={() => setShowEmail(!showEmail)}
             buttonName="contact me"
             bgColor={"transparent"}
             fColor={"#fff"}
           />
           {showEmail && (
-           <S.EmailSpan ref={emailRef}>maicondguerian@pronton.me
-            <FiClipboard 
-              size={20} 
-              onClick={handleClipboardChange}
-              stroke={isCopied? '#7ABE82' : '#333'}
+            <S.EmailSpan ref={emailRef}>
+              maicondguerian@pronton.me
+              <FiClipboard
+                size={20}
+                onClick={handleClipboardChange}
+                stroke={isCopied ? "#7ABE82" : "#333"}
               />
-           </S.EmailSpan>
+            </S.EmailSpan>
           )}
-          <a href="../../../public/maicondgueriandev.pdf" download>
+          <a
+            href="https://drive.google.com/uc?export=download&id=1igqSnLxAMSlGS5nsw7FNYe87OGC8pUAK"
+            download
+          >
             <Buttom
               buttonName="download-cv"
               bgColor={"transparent"}

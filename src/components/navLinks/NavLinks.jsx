@@ -47,7 +47,7 @@ const FixedBar = () => {
     <S.MenuLinksWrapper>
       <DevLogo />
       <span>
-        <a href="/maicondgueriandev.pdf" download>
+        <a href='https://drive.google.com/uc?export=download&id=1igqSnLxAMSlGS5nsw7FNYe87OGC8pUAK' download>
           <Buttom
             buttonName="download-cv"
             bgColor={"transparent"}
