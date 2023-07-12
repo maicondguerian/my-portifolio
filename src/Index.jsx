@@ -48,9 +48,6 @@ const handleShowModal = () => {
       setToggleTheme(theme);
     }
   }
-  useEffect(()=>{
-
-  },[darkTheme, darkTheme]);
 
 const handleScrollToTop= () => {
   if(startOfPageRef.current){
