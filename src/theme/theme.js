@@ -12,7 +12,8 @@ export const theme = {
         skyBlue: '#0079ff',
         darkGray: '#b6b0b0ba',
         bgAvatar: '#273036',
-        softDark: '#242424'
+        softDark: '#242424',
+        neonGreen: '#7ABE82'
     }
 }
 export const darkThemeColor  = {

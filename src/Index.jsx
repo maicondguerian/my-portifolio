@@ -8,14 +8,15 @@ import { WhoIam } from "./components/whoIam/WhoIam"
 import { MySkills } from "./components/skills/mySkills"
 import { Projects } from "./components/myProjects/Projects"
 import { BsSun, BsMoonFill } from "react-icons/bs";
-import { Contact } from "./components/contact/Contact"
 import { Footer } from "./components/footer/Footer"
 import {useLocalStorage} from './localStorage'
 
 export const Index = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const startOfPageRef   = useRef(null);
-  const skillSection   = useRef(null);
+  const startOfPageRef = useRef(null);
+  const skillSectionRef = useRef(null);
+  const projectsSectionRef = useRef(null);
+  
   const darkTheme = {
     ...theme,
     primaryColors: {
@@ -58,11 +59,14 @@ const handleScrollToTop= () => {
 }
 
 
-const movePage = () =>{
-    if(skillSection.current){
-      skillSection.current.scrollIntoView({behavior: 'smooth'})
-    }
-} 
+const moveToSkills = () => {
+  skillSectionRef.current?.scrollIntoView({behavior: 'smooth', block: 'start'});
+ 
+}
+const moveToProjects = () => {
+  projectsSectionRef.current?.scrollIntoView({behavior: 'smooth', block: 'start'});
+
+}
 
   // const handleScrollToTop = () => {
   //   const element = document.querySelector('#teste')
@@ -70,7 +74,7 @@ const movePage = () =>{
   // } forma alternativa de fazer pegando o elemento  pelo id do doom/
 
   return (
-    <MyContext.Provider value={{handleShowModal, isOpen, setIsOpen, handleToggleTheme, startOfPageRef, handleScrollToTop,skillSection, movePage }}>
+    <MyContext.Provider value={{handleShowModal, isOpen, setIsOpen, handleToggleTheme, startOfPageRef, handleScrollToTop, skillSectionRef, moveToSkills, moveToProjects,projectsSectionRef }}>
       <ThemeProvider theme={toggleTheme}>
         <GlobalStyles />
         <Container>
@@ -78,7 +82,6 @@ const movePage = () =>{
           <WhoIam />
           <MySkills />
           <Projects />
-          <Contact />
           <Footer />
         </Container>
       </ThemeProvider>

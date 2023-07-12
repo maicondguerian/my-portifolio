@@ -6,9 +6,9 @@ import { MyContext } from "../../context/MyContext";
 
 const FooterWrapper = styled.footer`
   background-size:cover;
-  height:300px;
+  height:200px;
   position: relative;
-
+  border-top:  solid 1px ;
     span{
       position:absolute;
       bottom:0;
