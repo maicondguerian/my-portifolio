@@ -47,7 +47,7 @@ const FixedBar = () => {
     <S.MenuLinksWrapper>
       <DevLogo />
       <span>
-        <a href="../../../public/maicondgueriandev.pdf" download>
+        <a href="/maicondgueriandev.pdf" download>
           <Buttom
             buttonName="download-cv"
             bgColor={"transparent"}
