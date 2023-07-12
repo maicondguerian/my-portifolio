@@ -1,40 +1,7 @@
-
-import styled from 'styled-components'
 import { AllTitlesStyle } from '../allTittleStyle/AllTittleStyle';
 import { MyContext } from '../../context/MyContext';
 import { useContext } from 'react';
-
-const StyledContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 3.5rem;
-    justify-content:space-between;
-
-    span{
-        display: flex;
-    }
-`
-const StyledUl = styled.ul`
-    list-style:none;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    grid-column-gap: 1rem;
-    grid-row-gap: 4rem;
-
-    
-    li{
-        span{
-            font-size: 40px;
-            display:flex;
-            align-items:center;
-        } 
-    }
-
-    li:nth-child(1) span,
-    li:nth-child(2) span {
-        text-transform: uppercase;
-    }
-`
+import * as S from '../../styles/globalStyles';
 
 export const MySkills = () => {
     const { skillSectionRef } = useContext(MyContext);
@@ -64,12 +31,12 @@ export const MySkills = () => {
         <>
         <span ref={skillSectionRef}/>
         <span />
-        <StyledContainer>
+        <S.StyledContainerSkills>
             <span><AllTitlesStyle customName='Skills'/></span> 
-            <StyledUl>
+            <S.StyledUl>
                 <RenderSkills />
-            </StyledUl>
-        </StyledContainer>
+            </S.StyledUl>
+        </S.StyledContainerSkills>
         </>
     );
 };
