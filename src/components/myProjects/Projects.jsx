@@ -4,6 +4,7 @@ import pjt1 from "../../assets/Screenshot_3.png";
 import pjt2 from "../../assets/Screenshot_7.png";
 import pjt3 from "../../assets/Screenshot_8.png";
 import pjt4 from "../../assets/Screenshot_9.png";
+import pjt5 from "../../assets/Screenshot_10.png";
 import { Modal } from "../modal/Modal";
 import { AllTitlesStyle } from "../allTittleStyle/AllTittleStyle";
 import { MyContext } from "../../context/MyContext";
@@ -109,18 +110,22 @@ export const Projects = () => {
       proj: "interactive-rating-component/",
       exp: "exp",
       img: <img src={pjt3} alt="roll-adive-advisor" />,
-      id: 5,
+      id: 3,
       url:'https://front-end-mentor-challenge-next-js.vercel.app/'
     },
     {
       proj: "sign-up-with-success-message-NEXTI.JS",
-      exp: "React sass Semantic html5 markup",
+      exp: "Next-JS, styled-components, M-UI",
       img: <img src={pjt4} alt="roll-adive-advisor" />,
-      id: 3,
+      id: 4,
       url: 'https://front-end-mentor-challenge-next-js.vercel.app/'
       
     },
-    { proj: "--", exp: "exp", id: 5 },
+    { proj: "interactive-pricing-component",
+    exp: "Next-JS, styled-components", id: 5,
+    img: <img src={pjt5} alt="roll-adive-advisor" />,
+    url: 'https://front-end-mentor-challenge-next-js.vercel.app/'
+    },
     { proj: "--", exp: "exp", id: 6 },
   ];
 
